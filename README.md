@@ -1,6 +1,16 @@
 # TaskFlow - Task Management Application
 
 TaskFlow is a full-stack task management web application for creating, updating, deleting, and tracking personal tasks. It includes authentication, protected task APIs, dashboard statistics, filtering, and a responsive interface for desktop and mobile screens.
+## 🚀 Live Demo
+
+- **Live Application:** https://task-flow-task-management-app-mocha.vercel.app
+
+## 👩‍💻 Author
+
+**Donthu Bhavya Sri**
+
+- GitHub: https://github.com/bhavyasri123-pr
+- Repository: https://github.com/bhavyasri123-pr/TaskFlow-Task-Management-App
 
 ## Features
 
