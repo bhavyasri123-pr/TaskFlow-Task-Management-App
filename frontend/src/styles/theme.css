@@ -1,0 +1,157 @@
+:root{
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
+    --primary-soft:#DBEAFE;
+    --background:#EEF4FF;
+    --surface:#FFFFFF;
+    --surface-soft:#F3F7FF;
+    --sidebar:#111827;
+    --sidebar-hover:#1F2937;
+    --border:#DDE7F5;
+    --text:#111827;
+    --text-light:#526173;
+    --success:#22C55E;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+    --radius:14px;
+    --shadow:0 12px 30px rgba(15,23,42,0.08);
+    --shadow-soft:0 10px 22px rgba(37,99,235,0.08);
+}
+
+body.dark-mode{
+    --primary:#60A5FA;
+    --primary-dark:#3B82F6;
+    --primary-soft:#1E3A8A;
+    --background:#070B16;
+    --surface:#101827;
+    --surface-soft:#182238;
+    --sidebar:#020617;
+    --sidebar-hover:#111827;
+    --border:#334155;
+    --text:#F8FAFC;
+    --text-light:#D8E2F0;
+    --shadow:0 14px 34px rgba(0,0,0,0.28);
+    --shadow-soft:0 10px 24px rgba(0,0,0,0.22);
+}
+
+body,
+.dashboard,
+.main-content,
+.dashboard-content,
+.navbar,
+.profile-btn,
+.dropdown,
+.stats-card,
+.task-card,
+.chart-card,
+.profile-card,
+.profile-details,
+.profile-stats,
+.modal,
+.delete-modal,
+.login-right,
+.register-page,
+.register-right{
+    transition:background-color .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select{
+    background:#0F172A;
+    color:var(--text);
+    border-color:var(--border);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder{
+    color:#94A3B8;
+}
+
+body.dark-mode .login-card,
+body.dark-mode .register-form,
+body.dark-mode .task-card,
+body.dark-mode .stats-card,
+body.dark-mode .chart-card,
+body.dark-mode .profile-card,
+body.dark-mode .profile-details,
+body.dark-mode .profile-stats,
+body.dark-mode .modal,
+body.dark-mode .delete-modal,
+body.dark-mode .empty-state{
+    background:var(--surface);
+    color:var(--text);
+    border:1px solid var(--border);
+}
+
+body.dark-mode .login-card h2,
+body.dark-mode .register-form h2,
+body.dark-mode .task-card h3,
+body.dark-mode .profile-card h2,
+body.dark-mode .profile-details h2,
+body.dark-mode .profile-stats h2,
+body.dark-mode .empty-state h2,
+body.dark-mode .stat h3,
+body.dark-mode .stats-card h2,
+body.dark-mode .header-left h1{
+    color:var(--text);
+}
+
+body.dark-mode .login-card p,
+body.dark-mode .register-form p,
+body.dark-mode .task-card p,
+body.dark-mode .profile-card p,
+body.dark-mode .stat p,
+body.dark-mode .stats-card h4,
+body.dark-mode .header-left p,
+body.dark-mode .empty-state p{
+    color:var(--text-light);
+}
+
+body:not(.dark-mode) .dashboard-content{
+    background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.10), transparent 34%),
+        linear-gradient(180deg, #F7FAFF 0%, var(--background) 44%, #F8FBFF 100%);
+}
+
+body:not(.dark-mode) .navbar{
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(14px);
+}
+
+body.dark-mode .dashboard-content{
+    background:
+        radial-gradient(circle at top left, rgba(96,165,250,0.12), transparent 34%),
+        linear-gradient(180deg, #0B1120 0%, var(--background) 100%);
+}
+
+body.dark-mode .profile-avatar-preview{
+    border-color:#334155;
+    background:#0F172A;
+}
+
+body.dark-mode .priority.high{
+    background:rgba(239,68,68,0.18);
+    color:#FCA5A5;
+}
+
+body.dark-mode .priority.medium{
+    background:rgba(245,158,11,0.18);
+    color:#FCD34D;
+}
+
+body.dark-mode .priority.low,
+body.dark-mode .status.completed{
+    background:rgba(34,197,94,0.18);
+    color:#86EFAC;
+}
+
+body.dark-mode .status.pending{
+    background:rgba(245,158,11,0.18);
+    color:#FCD34D;
+}
+
+body.dark-mode .status.in-progress{
+    background:rgba(96,165,250,0.20);
+    color:#BFDBFE;
+}

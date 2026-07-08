@@ -1,0 +1,42 @@
+﻿.loader-page,
+.loader-inline{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    color:var(--text);
+    font-weight:700;
+}
+
+.loader-page{
+    min-height:240px;
+    padding:40px;
+}
+
+.loader-inline{
+    min-height:auto;
+}
+
+.loader-spinner,
+.button-spinner{
+    width:20px;
+    height:20px;
+    border:3px solid rgba(37,99,235,.22);
+    border-top-color:var(--primary);
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+    display:inline-block;
+    flex-shrink:0;
+}
+
+.button-spinner{
+    width:16px;
+    height:16px;
+    border-width:2px;
+    border-color:rgba(255,255,255,.4);
+    border-top-color:#fff;
+}
+
+@keyframes spin{
+    to{ transform:rotate(360deg); }
+}

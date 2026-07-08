@@ -1,0 +1,344 @@
+/* ===========================
+   PROFILE CONTAINER
+=========================== */
+
+.profile-container{
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* ===========================
+   PROFILE CARD
+=========================== */
+
+.profile-card{
+    position:relative;
+    background:var(--surface);
+    border-radius:22px;
+    padding:30px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+    overflow:hidden;
+}
+
+.profile-header-bg{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:110px;
+    background:linear-gradient(135deg,#2563EB,#60A5FA);
+    opacity:.08;
+}
+
+.avatar-section{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    margin-bottom:16px;
+}
+
+.profile-avatar-preview{
+    position:relative;
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    border:4px solid #DBEAFE;
+    background:#EFF6FF;
+    box-shadow:0 0 0 8px rgba(37,99,235,0.08);
+}
+
+.profile-avatar-preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.profile-icon{
+    font-size:90px;
+    color:var(--primary);
+}
+
+.avatar-camera-btn{
+    position:absolute;
+    right:4px;
+    bottom:4px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--primary);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+}
+
+.avatar-camera-btn input{
+    display:none;
+}
+
+.profile-card h2{
+    font-size:30px;
+    color:var(--text);
+    margin-bottom:6px;
+}
+
+.profile-card p{
+    color:var(--text-light);
+    font-size:15px;
+}
+
+.profile-role{
+    margin-top:14px;
+    display:inline-block;
+    padding:8px 16px;
+    background:var(--primary-soft);
+    color:var(--primary);
+    border-radius:999px;
+    font-weight:700;
+}
+
+.avatar-remove-btn{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:8px 14px;
+    border:none;
+    border-radius:10px;
+    background:#FEE2E2;
+    color:#B91C1C;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* ===========================
+   PERSONAL DETAILS
+=========================== */
+
+.profile-details{
+    background:var(--surface);
+    border-radius:22px;
+    padding:30px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+.profile-details h2{
+    margin-bottom:24px;
+    color:var(--text);
+}
+
+/* ===========================
+   FORMS
+=========================== */
+
+.profile-form{
+    margin-bottom:24px;
+    padding:20px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:var(--surface-soft);
+}
+
+.profile-form label{
+    display:block;
+    margin-bottom:10px;
+    color:var(--text);
+    font-weight:700;
+}
+
+.profile-form-row,
+.profile-password-grid{
+    display:grid;
+    gap:12px;
+}
+
+.profile-form-row{
+    grid-template-columns:1fr auto;
+}
+
+.profile-password-grid{
+    grid-template-columns:1fr 1fr auto;
+}
+
+.profile-form input{
+    width:100%;
+    padding:14px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:var(--surface);
+    color:var(--text);
+}
+
+.profile-form button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:14px 18px;
+    border:none;
+    border-radius:12px;
+    background:var(--primary);
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* ===========================
+   INFO ROWS
+=========================== */
+
+.info-row{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.info-row:last-child{
+    border-bottom:none;
+}
+
+.info-row svg{
+    color:var(--primary);
+    font-size:18px;
+}
+
+.info-row span{
+    width:150px;
+    color:var(--text-light);
+    font-weight:500;
+}
+
+.info-row strong{
+    color:var(--text);
+}
+
+/* ===========================
+   STATS SECTION
+=========================== */
+
+.profile-stats{
+    background:var(--surface);
+    border-radius:22px;
+    padding:30px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+.profile-stats h2{
+    margin-bottom:25px;
+}
+
+.progress-wrapper{
+    margin-bottom:30px;
+}
+
+.progress-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+    font-weight:700;
+}
+
+.progress-bar{
+    width:100%;
+    height:16px;
+    border-radius:999px;
+    background:var(--surface-soft);
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    border-radius:999px;
+    background:linear-gradient(90deg,#2563EB,#60A5FA);
+}
+
+.stats-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:var(--surface-soft);
+    border-radius:18px;
+    text-align:center;
+    padding:28px;
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-soft);
+}
+
+.stat svg{
+    font-size:38px;
+    margin-bottom:14px;
+}
+
+.stat.total svg{ color:#2563EB; }
+.stat.completed svg{ color:#22C55E; }
+.stat.pending svg{ color:#F59E0B; }
+.stat.progress svg{ color:#8B5CF6; }
+
+.stat h3{
+    font-size:32px;
+    color:var(--text);
+}
+
+.stat p{
+    color:var(--text-light);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .profile-container{
+        padding:20px;
+    }
+
+    .profile-card,
+    .profile-details,
+    .profile-stats{
+        padding:20px;
+    }
+
+    .profile-form-row,
+    .profile-password-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-box{
+        grid-template-columns:1fr;
+    }
+
+    .info-row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+    .info-row span{
+        width:auto;
+    }
+}

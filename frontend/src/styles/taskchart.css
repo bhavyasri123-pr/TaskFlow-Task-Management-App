@@ -1,0 +1,36 @@
+.chart-card{
+    margin-top:18px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:18px 20px 14px;
+    box-shadow:var(--shadow-soft);
+}
+
+.chart-body{
+    position:relative;
+    width:100%;
+    height:260px;
+}
+
+@media(max-width:1024px){
+    .chart-body{
+        height:240px;
+    }
+}
+
+@media(max-width:768px){
+    .chart-card{
+        padding:16px 14px 12px;
+    }
+
+    .chart-body{
+        height:220px;
+    }
+}
+
+@media(max-width:480px){
+    .chart-body{
+        height:200px;
+    }
+}

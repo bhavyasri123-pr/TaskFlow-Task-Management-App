@@ -1,0 +1,123 @@
+.navbar{
+    min-width:0;
+    min-height:82px;
+    background:var(--surface);
+    color:var(--text);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+    padding:14px 28px;
+    border-bottom:1px solid var(--border);
+    box-shadow:0 2px 12px rgba(15,23,42,.04);
+    position:sticky;
+    top:0;
+    z-index:20;
+}
+
+.navbar > div:first-child{
+    min-width:0;
+    flex:1;
+}
+
+.navbar h2,
+.navbar-left h2{
+    font-size:28px;
+    color:var(--text);
+    margin-bottom:4px;
+    line-height:1.15;
+}
+
+.navbar p,
+.navbar-left p{
+    color:var(--text-light);
+    font-size:14px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.navbar-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-shrink:0;
+}
+
+.theme-toggle{
+    width:44px !important;
+    height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--surface-soft);
+    color:var(--text);
+    font-size:18px;
+    cursor:pointer;
+}
+
+.theme-toggle:hover{
+    background:var(--primary-soft);
+    color:var(--primary);
+}
+
+.profile,
+.navbar-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.notification{
+    font-size:22px;
+    cursor:pointer;
+    color:var(--text-light);
+}
+
+@media (max-width:768px){
+    .navbar{
+        min-height:72px;
+        padding:12px 14px;
+        gap:10px;
+    }
+
+    .navbar h2,
+    .navbar-left h2{
+        font-size:22px;
+    }
+
+    .navbar p,
+    .navbar-left p{
+        font-size:13px;
+        max-width:42vw;
+    }
+
+    .theme-toggle{
+        width:38px !important;
+        height:38px;
+        border-radius:12px;
+        font-size:15px;
+    }
+
+    .navbar-actions{
+        gap:8px;
+    }
+}
+
+@media (max-width:480px){
+    .navbar{
+        padding:10px;
+    }
+
+    .navbar h2,
+    .navbar-left h2{
+        font-size:19px;
+    }
+
+    .navbar p,
+    .navbar-left p{
+        max-width:38vw;
+    }
+}

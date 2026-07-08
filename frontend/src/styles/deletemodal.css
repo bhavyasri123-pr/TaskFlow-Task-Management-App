@@ -1,0 +1,73 @@
+.delete-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.delete-modal{
+    width:420px;
+    background:var(--surface);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    animation:popup .25s ease;
+}
+
+.delete-modal h2{
+    margin-bottom:15px;
+}
+
+.delete-modal p{
+    color:var(--text-light);
+    margin-bottom:25px;
+}
+
+.delete-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.cancel-delete{
+    background:#E5E7EB;
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.confirm-delete{
+    background:#EF4444;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.confirm-delete:hover{
+    background:#DC2626;
+}
+.confirm-delete:disabled,
+.cancel-delete:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+}
+
+@media(max-width:520px){
+    .delete-modal{
+        width:calc(100vw - 28px);
+    }
+
+    .delete-buttons{
+        flex-direction:column-reverse;
+    }
+
+    .delete-buttons button{
+        width:100% !important;
+    }
+}

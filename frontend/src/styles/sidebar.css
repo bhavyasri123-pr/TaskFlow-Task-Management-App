@@ -1,0 +1,134 @@
+﻿.sidebar{
+    width:250px;
+    min-width:250px;
+    background:var(--sidebar);
+    color:white;
+    min-height:100vh;
+    padding:25px 18px;
+    display:flex;
+    flex-direction:column;
+    position:sticky;
+    top:0;
+    z-index:40;
+}
+
+.sidebar-toggle{
+    display:none;
+}
+
+.sidebar-backdrop{
+    display:none;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.logo h2{
+    color:#3B82F6;
+    font-size:32px;
+    font-weight:800;
+}
+
+.sidebar nav{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.sidebar nav a,
+.logout-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#D1D5DB;
+    transition:.25s;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.sidebar nav a:hover,
+.logout-btn:hover{
+    background:var(--sidebar-hover);
+    color:white;
+}
+
+.sidebar nav a.active{
+    background:#2563EB;
+    color:white;
+}
+
+.logout-btn:hover{
+    background:#EF4444;
+}
+
+@media(max-width:768px){
+    .sidebar-toggle{
+        width:44px !important;
+        height:44px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        position:fixed;
+        left:12px;
+        top:12px;
+        z-index:90;
+        border-radius:12px;
+        background:var(--primary);
+        color:#fff;
+        box-shadow:var(--shadow);
+    }
+
+    .sidebar-backdrop{
+        display:block;
+        position:fixed;
+        inset:0;
+        background:rgba(15,23,42,.45);
+        z-index:70;
+    }
+
+    .sidebar{
+        position:fixed;
+        left:0;
+        top:0;
+        bottom:0;
+        width:250px;
+        min-width:250px;
+        transform:translateX(-105%);
+        transition:transform .28s ease;
+        z-index:80;
+        padding-top:74px;
+    }
+
+    .sidebar.open{
+        transform:translateX(0);
+    }
+
+    .logo{
+        margin-bottom:30px;
+    }
+
+    .logo h2{
+        font-size:28px;
+    }
+
+    .sidebar nav a,
+    .logout-btn{
+        justify-content:flex-start;
+        padding:14px 18px;
+        gap:12px;
+    }
+
+    .sidebar nav a span,
+    .logout-btn span{
+        display:inline;
+    }
+
+    .dashboard .main-content{
+        width:100%;
+    }
+}
